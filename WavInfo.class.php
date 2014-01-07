@@ -28,7 +28,7 @@ class WavInfo {
     }
 
     public function getSampleRate() {return $this->samplerate;}
-    public function getChanels() {return $this->channels;}
+    public function getChannels() {return $this->channels;}
     public function getBits() {return $this->bitspersample;}
     public function getSamples() {return $this->frames;}
     public function getDuration() {return $this->getSamples()/$this->getSampleRate();}
