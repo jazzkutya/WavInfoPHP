@@ -10,7 +10,7 @@ $wavinfo=new WavInfo($filename);
 Public methods:
 
  - getSampleRate() returns the sample rate in Hz
- - getChannels() Returns the channel count (1: Mono, 2: Stereo.)
+ - getChannels() returns the channel count (1: Mono, 2: Stereo.)
  - getBits() returns the sample resolution (example: cd quality uses 16 bits)
  - getSamples() returns the number of Samples in the WAV file. Here Sample means a block of one sample for each channel.
  - getDuration() returns the duration of the audio in the WAV file in seconds
