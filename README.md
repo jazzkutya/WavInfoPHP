@@ -10,11 +10,11 @@ $wavinfo=new WavInfo($filename);
 Public methods:
 
  - getSampleRate() returns the sample rate in Hz
- - getChanels() Returns the cannel count (1: Mono, 2: Stereo.)
+ - getChannels() Returns the cannel count (1: Mono, 2: Stereo.)
  - getBits() returns the sample resolution (example: cd quality uses 16 bits)
  - getSamples() returns the number of Samples in the WAV file. Here Sample means a block of one sample for each channel.
  - getDuration() returns the duration of the audio in the WAV file in seconds
 
  - Why?
- - At the time of writing I could not find a simple PHP class on teh mighty net that attempted to get the above info from WAV files in a correct way (parsing chunks correctl).
+ - At the time of writing I could not find a simple PHP class on teh mighty net that attempted to get the above info from WAV files in a correct way (parsing chunks correctly).
 
