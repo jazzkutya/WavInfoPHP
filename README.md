@@ -16,6 +16,7 @@ Public methods:
  - getDuration() returns the duration of the audio in the WAV file in seconds
  - describe() returns a string: simple textual description of the WAV file
 
- - Why?
- - At the time of writing I could not find a simple PHP class on teh mighty net that attempted to get the above info from WAV files in a correct way (parsing chunks correctly).
+
+Why?
+At the time of writing I could not find a simple PHP class on teh mighty net that attempted to get the above info from WAV files in a correct way (parsing chunks correctly).
 
