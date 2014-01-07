@@ -1,7 +1,7 @@
 WavInfoPHP
 ==========
 
-PHP Class for reading basic info of PCM WAV files
+PHP class for reading basic info of PCM WAV files
 
 Only PCM WAV files are supported. May have problems with bit resolutions not multiple of 8 like 20 bit pcm.
 
