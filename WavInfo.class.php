@@ -124,10 +124,11 @@ class WavInfo {
         while (TRUE) {
             //var_dump($ck);
             //print("chunk loop\n");
-            if ($ck['pos']>=$ck['cknextpos']) {
+            if (($ck['pos']+4)>=$ck['cknextpos']) { // ignore max 4 byte of junk at the end of a container chunk
                 if ($ck['pos']>$ck['cknextpos']) throw new Exception("$this->fn: corrupt file: a subchunk extends outside it's parent");
                 array_pop($ckstack);
                 if (count($ckstack)==0) break;          // phew, we are done
+                if ($ck['pos']!=$ck['cknextpos']) fseek($this->fh,$ck['cknextpos']);      // skip over max 4 bytes of junk
                 unset($ck);
                 $ck =& $ckstack[count($ckstack)-1];
                 //print("Going up\n");
