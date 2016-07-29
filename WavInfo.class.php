@@ -174,4 +174,3 @@ class WavInfo {
         $this->processed=TRUE;
     }
 }
-?>
