@@ -129,6 +129,7 @@ class WavInfo {
                 array_pop($ckstack);
                 if (count($ckstack)==0) break;          // phew, we are done
                 if ($ck['pos']!=$ck['cknextpos']) fseek($this->fh,$ck['cknextpos']);      // skip over max 4 bytes of junk
+                foreach ($ckstack as &$cki) $cki['pos']=$ck['cknextpos'];
                 unset($ck);
                 $ck =& $ckstack[count($ckstack)-1];
                 //print("Going up\n");
@@ -158,7 +159,7 @@ class WavInfo {
                 $thisck['pos']=ftell($this->fh);
                 $thisck['listtype']=$listtype;
                 unset($ck);
-                $ck =& $ckstack[count($ckstack)-1]; // make the while work on this chunk's subchunks
+                $ck =& $ckstack[count($ckstack)-1]; // make the loop work on this chunk's subchunks
                 //print("Going down\n");
                 continue;
             }
